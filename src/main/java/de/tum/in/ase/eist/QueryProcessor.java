@@ -38,20 +38,20 @@ public class QueryProcessor {
 //
 //            plusRechnen[0].length();
 //
-//        } else if (query.contains("largest:")) { // largest: 70, 43
-//            String[] numbers = query.split("largest:");
-//            String[] zahl = query.split(",");
-//            int[] nachGroesse = new int[zahl.length - 1];
-//            for (int i = 0; i < zahl.length; i++) {
-//                nachGroesse[i] = Integer.parseInt(zahl[i]);
-//            }
-//            int groessteZahl = 0;
-//            for (int j : nachGroesse) {
-//                if (j > groessteZahl) {
-//                    groessteZahl = j;
-//                }
-//            }
-//            return "" + groessteZahl;
+        } else if (query.contains("largest:")) { // largest: 70, 43 6af083b0: which of the following numbers is the largest: 961
+            String rechnung = query.substring(53);
+            String[] zahl = rechnung.split(",");
+            int[] nachGroesse = new int[zahl.length - 1];
+            for (int i = 0; i < zahl.length; i++) {
+                nachGroesse[i] = Integer.parseInt(zahl[i]);
+            }
+            int groessteZahl = 0;
+            for (int j : nachGroesse) {
+                if (j > groessteZahl) {
+                    groessteZahl = j;
+                }
+            }
+            return "" + groessteZahl;
 //
 //        } else if () {
 //
