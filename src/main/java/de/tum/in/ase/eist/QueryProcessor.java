@@ -29,8 +29,8 @@ public class QueryProcessor {
 //        } else if (query.contains("1 plus 17")) {
 //            return "18";
         } else if (query.contains("plus")) {//what is 18 plus 9 7f5d3170: what is 17 plus 14
-            String rechnung = query.substring(18);
-            String[] zweiZahlen = rechnung.split("plus");
+            String rechnung = query.substring(19);
+            String[] zweiZahlen = rechnung.split("plus ");
             int ersteZahl = Integer.parseInt(zweiZahlen[0]);
             int zweiteZahl = Integer.parseInt(zweiZahlen[1]);
             return "" + ersteZahl + zweiteZahl;
@@ -39,8 +39,8 @@ public class QueryProcessor {
 //            plusRechnen[0].length();
 //
         } else if (query.contains("largest:")) { // largest: 70, 43 6af083b0: which of the following numbers is the largest: 961
-            String rechnung = query.substring(53);
-            String[] zahl = rechnung.split(",");
+            String rechnung = query.substring(58);
+            String[] zahl = rechnung.split(", ");
             int[] nachGroesse = new int[zahl.length - 1];
             for (int i = 0; i < zahl.length; i++) {
                 nachGroesse[i] = Integer.parseInt(zahl[i]);
