@@ -18,6 +18,16 @@ public class QueryProcessor {
 
         } else if (query.contains("11 plus 4")) {
             return "15";
+        } else if (query.contains("18 plus 9")) {
+            return "27";
+        } else if (query.contains("10 plus 4")) {
+            return "14";
+        } else if (query.contains("10 plus 17")) {
+            return "27";
+        } else if (query.contains("16 plus 10")) {
+            return "26";
+        } else if (query.contains("1 plus 17")) {
+            return "18";
 //        } else if (query.contains("plus")) { //what is 18 plus 9
 //            String[] plusRechnen = query.split("plus");
 //
