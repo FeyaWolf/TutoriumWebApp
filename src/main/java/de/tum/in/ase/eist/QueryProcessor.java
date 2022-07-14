@@ -33,20 +33,20 @@ public class QueryProcessor {
 //
 //            plusRechnen[0].length();
 //
-//        } else if (query.contains("largest:")) { // largest: 70, 43
-//            String[] numbers = query.split("largest:");
-//            String[] zahl = query.split(",");
-//            int[] nachGröße = new int[zahl.length - 1];
-//            for (int i = 0; i < zahl.length; i++) {
-//                nachGröße[i] = Integer.parseInt(zahl[i]);
-//            }
-//            int größteZahl = 0;
-//            for (int i = 0; i < nachGröße.length; i++) {
-//                if (nachGröße[i] > größteZahl) {
-//                    größteZahl = nachGröße[i];
-//                }
-//            }
-//            return "" + größteZahl;
+        } else if (query.contains("largest:")) { // largest: 70, 43
+            String[] numbers = query.split("largest:");
+            String[] zahl = query.split(",");
+            int[] nachGroesse = new int[zahl.length - 1];
+            for (int i = 0; i < zahl.length; i++) {
+                nachGroesse[i] = Integer.parseInt(zahl[i]);
+            }
+            int groessteZahl = 0;
+            for (int j : nachGroesse) {
+                if (j > groessteZahl) {
+                    groessteZahl = j;
+                }
+            }
+            return "" + groessteZahl;
 //
 //        } else if () {
 //
